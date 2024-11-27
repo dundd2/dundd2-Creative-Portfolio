@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duncan Law's Creative Portfolio</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <meta name="description" content="A dynamic and interactive portfolio showcasing Duncan Law's creative works in video editing, UI/UX design, graphics, game development, and 3D modeling.">
+    <meta name="keywords" content="Duncan Law, Creative Portfolio, Video Editing, UI/UX Design, Graphics, Game Development, 3D Modeling">
+    <meta name="author" content="Duncan Law">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Creative Portfolio - Duncan Law">
+    <meta property="og:description" content="Explore Duncan Law's dynamic and interactive portfolio featuring creative works in video editing, UI/UX design, graphics, game development, and 3D modeling.">
+    <meta name="version" content="1.0">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <div id="settings-toggle" class="settings-toggle">
+        <span>⚙️</span>
+    </div>
+    <div id="settings-panel" class="settings-panel hidden">
+        <button id="settings-close" class="settings-close">×</button>
+        <div class="settings-content">
+            <div class="settings-item">
+                <label>Theme</label>
+                <select id="theme-select">
+                    <option value="default">Default</option>
+                    <option value="ocean">Ocean</option>
+                    <option value="sunset">Sunset</option>
+                    <option value="forest">Forest</option>
+                    <option value="cyber">Cyber</option>
+                    <option value="minimal">Minimal</option>
+                    <option value="neon">Neon</option>
+                    <option value="midnight">Midnight</option>
+                </select>
+            </div>
+            <div class="settings-item">
+                <label>Dark Mode</label>
+                <button id="darkmode-toggle">🌓</button>
+            </div>
+            <div class="settings-item">
+                <label>Zoom</label>
+                <input type="range" id="zoom-control" min="80" max="120" value="100">
+            </div>
+            <div class="settings-item">
+                <label>Font Size</label>
+                <input type="range" id="font-size-control" min="14" max="20" value="16">
+            </div>
+            <span class="version-tag">v1.0</span>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#video-editing">Video Production</a></li>
+                <li><a href="#ui-design">UI/UX & Graphic Design</a></li>
+                <li><a href="#scene-design">Game Development</a></li>
+                <li><a href="#modeling">3D Models</a></li>
+                <li class="portfolio-link"><a href="https://dundd2.github.io/Portfolio-Website/" target="_blank">Portfolio Website</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <div class="about-content">
+              <h2>WELCOME TO MY <br>
+                <span class="creative-title">Creative Portfolio</span>
+              </h2>
+                <h1>Hi! I am Duncan Law.</h1>
+                <p>I'm an Undergraduate student, major in <br> Computing for Digital Media and Games <br> BSc (Hons) at University of Sussex.</p>
+                <p>Based in Brighton, United Kingdom.</p>
+                <div class="social-icons">
+                    <a href="https://github.com/dundd2" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/duncanl400" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://sketchfab.com/dundd2" target="_blank"><i class="fab fa-sketchfab"></i></a>
+                    <a href="https://huggingface.co/Dundd2" target="_blank"><i class="fas fa-robot"></i></a>
+                </div>
+            </div>
+             <div class="about-image">
+                <img src="images/about_me.jpg" alt="Tevy Ho">
+             </div>
+           
+        </section>
+
+        <section id="video-editing" class="video-editing-section">
+            <h2>Video Editing</h2>
+            <p>Using Adobe Premiere</p>
+            <div class="video-content">
+                <div class="video-container">
+                    <img src="images/video_editing_main.jpg" alt="Video Editing">
+                    <div class="video-thumbnails">
+                        <img src="images/video_editing_timeline.png" alt="Timeline">
+                        <img src="images/video_editing_wave.png" alt="Waveform">
+                        <img src="images/video_editing_vectorscope.png" alt="Vectorscope">
+                    </div>
+                </div>
+
+                <div class="video-description">
+                    <ul>
+                        <li><b>Designed for a larger TV program about Dr Pat’s allotment (2 mins 30 seconds)</b>.</li>
+                        <li>This involved choosing <b>footage, cutting, adding custom music</b>, incorporating <b>graphics</b>, and
+                            <b>colour</b> grading to tell a compelling story.
+                        </li>
+                        <li>This project allowed me to apply my technical skills in video editing and storytelling, resulting in a
+                            professional-quality segment suitable for broadcast.
+                        </li>
+                        <li>And more ongoing projects...</li>
+                    </ul>
+                </div>
+                <div class="video-link">
+                    <a href="https://github.com/dundd2/Y2-Video-Production-Techniques-Assignment-1" target="_blank" class="view-project">
+                        View Project on GitHub <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="filming-content">
+                <h3>Filming Projects</h3>
+                <div class="filming-grid">
+                    <div class="filming-item">
+                        <img src="images/filming_1.jpg" alt="Studio Filming">
+                        <p>Professional Studio Filming</p>
+                    </div>
+                    <div class="filming-item">
+                        <img src="images/filming_2.jpg" alt="Location Shooting">
+                        <p>Outdoor Location Shooting</p>
+                    </div>
+                    <div class="filming-item">
+                        <img src="images/filming_3.jpg" alt="Kitchen Setup">
+                        <p>Kitchen Scene Setup</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ui-design" class="ui-design-section">
+            <h2>UI Design</h2>
+            <p>Using Adobe XD</p>
+             <div class="ui-design-content">
+                <div class="ui-images">
+                    <img src="images/ui_design_1.png" alt="UI Design 1">
+                    <img src="images/ui_design_2.png" alt="UI Design 2">
+                    <img src="images/ui_design_3.png" alt="UI Design 3">
+                    <img src="images/ui_design_4.png" alt="UI Design 4">
+                    <img src="images/ui_design_5.png" alt="UI Design 5">
+                     <img src="images/ui_design_6.png" alt="UI Design 6">
+                    <img src="images/ui_design_7.png" alt="UI Design 7">
+                    <img src="images/ui_design_8.png" alt="UI Design 8">
+                     <img src="images/ui_design_9.png" alt="UI Design 9">
+                </div>
+             </div>
+        </section>
+
+        <section id="graphic-logo-design" class="graphic-logo-section">
+    <h2>Graphic/ Logo Design</h2>
+    <p>Using Adobe Illustrator, and Procreate</p>
+    <div class="graphic-logo-content">
+        <div class="logo-item">
+            <div class="logo-image">
+                <a href="https://dundd2.github.io/Portfolio-Website/" target="_blank">
+                    <img src="images/firstwebsiteofdunc_logo.png" alt="FirstWebsiteOfDunc Logo">
+                </a>
+            </div>
+            <div class="logo-desc">
+                <h3>FirstWebsiteOfDunc Logo</h3>
+                <ul>
+                    <li>Minimalist design with modern typography</li>
+                    <li>Responsive and scalable for various platforms</li>
+                    <li>Color scheme represents digital innovation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logo-item text-first">
+            <div class="logo-desc">
+                <h3>2022 Commemorative Patch</h3>
+                <ul>
+                    <li>Digital patch design for virtual platforms</li>
+                    <li>Celebrating key milestones of 2022</li>
+                </ul>
+            </div>
+            <div class="logo-image">
+                <img src="images/patchUK_2022.jpg" alt="2022 Patch">
+            </div>
+        </div>
+
+        <div class="logo-item">
+            <div class="logo-image">
+                <img src="images/germany_summer_path.png" alt="Germany Summer School Path">
+            </div>
+            <div class="logo-desc">
+                <h3>2024 June Germany Summer School Journey</h3>
+                <ul>
+                    <li>Custom designed exclusive path map</li>
+                    <li>Commemorating unforgettable times at the German summer school</li>
+                    <li>Showcasing personal growth and international perspective</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logo-item text-first">
+            <div class="logo-desc">
+                <h3>Dunc Profile Picture Logo</h3>
+                <ul>
+                    <li>Custom designed personal branding</li>
+                    <li>Christmas themed profile picture</li>
+                    <li>Incorporating seasonal elements with personal style</li>
+                </ul>
+            </div>
+            <div class="logo-image">
+                <img src="images/pfp2024chrismas.png" alt="Dunc Profile Picture">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="hongkong-food" class="hongkong-food-section">
+    <h2>Drawing Collection of  Food</h2>
+    <p>Using Procreate and Photoshop</p>
+    <div class="hongkong-food-content">
+        <div class="hongkong-food-row-1">
+            <div class="hongkong-food-text">
+                <h3> Food Collection</h3>
+                <p>This series showcases 's unique food culture, including tea restaurants and street food classics. Each artwork attempts to capture the texture of the food and the essence of  life.</p>
+                <ul>
+                    <li>Hand-drawn using Procreate</li>
+                    <li>Color adjustment using Photoshop</li>
+                    <li>Focus on food texture representation</li>
+                </ul>
+            </div>
+            <div class="food-image">
+                <img src="images/hongkong_food_1.jpg" alt=" Food 1">
+            </div>
+            <div class="food-image">
+                <img src="images/hongkong_food_2.jpg" alt=" Food 2">
+            </div>
+            <div class="food-image">
+                <img src="images/hongkong_food_3.jpg" alt=" Food 3">
+            </div>
+        </div>
+        <div class="hongkong-food-row-2">
+            <div class="food-image">
+                <img src="images/hongkong_food_4.jpg" alt=" Food 4">
+            </div>
+            <div class="food-image">
+                <img src="images/hongkong_food_5.jpg" alt=" Food 5">
+            </div>
+            <div class="food-image">
+                <img src="images/hongkong_food_6.jpg" alt=" Food 6">
+            </div>
+            <div class="food-image">
+                <img src="images/hongkong_food_7.jpg" alt=" Food 7">
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="scene-design" class="scene-design-section">
+    <h2>Unity Game Development</h2>
+    <p>Fall Guin - Interactive Unity 3D Game</p>
+    <div class="game-dev-content">
+        <div class="game-description">
+            <p>A Fall Guys-inspired game where players control Pingu through Arctic obstacles.</p>
+            <ul>
+                <li>3D Environment with full axis movement</li>
+                <li>Animated player avatar with walking/jumping</li>
+                <li>Third-person camera system</li>
+                <li>Life and scoring systems</li>
+                <li>Interactive obstacles and collectibles</li>
+            </ul>
+            <div class="project-link">
+                <a href="https://github.com/dundd2/Y2-Game-Development-Project1-Fall-Guin" target="_blank" class="view-project">
+                    View Project on GitHub <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="game-gallery">
+            <div class="main-screenshots">
+                <img src="images/game_screenshot1.png" alt="Fall Guin Gameplay 1">
+                <img src="images/game_screenshot2.png" alt="Fall Guin Gameplay 2">
+                <img src="images/game_screenshot3.png" alt="Fall Guin Environment">
+            </div>
+            <div class="gameplay-preview">
+                <img src="images/gameplay_gif1.gif" alt="Gameplay Animation 1">
+                <img src="images/gameplay_gif2.gif" alt="Gameplay Animation 2">
+            </div>
+        </div>
+    </div> <!-- Add this missing closing tag -->
+</section>
+
+        <section id="scene-design-vm" class="scene-design-vm-section">
+            <h2>GTA V Mods</h2>
+            <p>Using OpenIV</p>
+            <p>Toyota Prius Hikonin Sentai Akibaranger Machine Itashar Livery 2.0</p>
+            <p><a href="https://www.gta5-mods.com/paintjobs/toyota-prius-xw30-hikonin-sentai-akibaranger-machine-itashar-z-cune-aoi-livery#description_tab" target="_blank" class="view-project">View on GTA5-Mods.com <i class="fas fa-external-link-alt"></i></a></p>
+
+            <div class="scene-design-vm-content">
+                <div class="gta-gallery">
+                    <!-- Main Image -->
+                    <div class="main-image">
+                        <img id="mainGTAImage" src="images/GTAprius (4).webp" alt="GTA Mod Main Preview" class="img-responsive">
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div class="thumbnails-row">
+                        <div class="thumbnail-item">
+                            <img src="images/GTAprius (1).webp" alt="GTA Mod Preview 1" onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="images/GTAprius (2).png" alt="GTA Mod Preview 2" onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="images/GTAprius (3).png" alt="GTA Mod Preview 3" onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="images/GTAprius (4).webp" alt="GTA Mod Preview 4" onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="images/GTAprius (5).png" alt="GTA Mod Preview 5" onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="images/GTAprius (6).png" alt="GTA Mod Preview 6" onclick="changeMainImage(this.src)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ml-award" class="ml-award-section">
+    <h2>Machine Learning Creative Solution Award 2023-2024</h2>
+    <div class="award-content">
+        <div class="award-images">
+            <img src="images/ml_award_1.jpg" alt="certificate with fitbit">
+            <img src="images/ml_award_2.png" alt="certificate">
+        </div>
+        <div class="award-description">
+            <p>Received the 2023-2024 Machine Learning Creative Solution Award</p>
+            <ul>
+                <li>Innovative application of AI technology</li>
+                <li>Creative solutions for practical problems</li>
+                <li>Outstanding project presentation</li>
+            </ul>
+            <div class="project-link">
+                <a href="https://github.com/dundd2/ML-Challenge2023" target="_blank" class="view-project">
+                    View Project on GitHub <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="modeling" class="modeling-section">
+    <h2>3D Modeling</h2>
+    <p>Using Maya and Blender</p>
+    <p>Click on images to view interactive 3D models on Sketchfab</p>
+
+    <div class="models-featured">
+        <div class="models-main-view">
+            <div class="model-showcase">
+                <a href="https://sketchfab.com/3d-models/donbrothers-mini-figure-don-momotaro-c016686884bf429f856b02f0f3d17e2a" class="main-model" target="_blank">
+                    <div class="model-details">
+                        <div class="model-top">
+                            <div class="model-name">DonBrothers Mini Figure - Don Momotaro</div>
+                            <div class="model-version">v1.0</div>
+                        </div>
+                        <div class="model-bottom">
+                            <span class="bottom-by">By</span> Duncan Law
+                        </div>
+                    </div>
+                    <img src="images/Don Momotaro.png" alt="Don Momotaro" class="main-preview">
+                </a>
+            </div>
+        </div>
+        
+        <div class="models-sidebar">
+            <ul class="model-thumbnails">
+                <li class="active">
+                    <a href="#" class="model-thumb" data-url="https://sketchfab.com/3d-models/donbrothers-mini-figure-don-momotaro-c016686884bf429f856b02f0f3d17e2a">
+                        <img src="images/Don Momotaro.png" alt="Don Momotaro">
+                    </a>
+                </li>
+                <!-- Repeat for other models -->
+                <li>
+                    <a href="#" class="model-thumb" data-url="https://sketchfab.com/3d-models/pfp-beaab9a9cc04488bae7a7111306dc678">
+                        <img src="images/pfp.png" alt="PFP">
+                    </a>
+                </li>
+                <!-- ...similar entries for remaining models... -->
+            </ul>
+        </div>
+    </div>
+</section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get in touch!</h2>
+            <ul>
+                <li>
+                    <i class="fab fa-github"></i>
+                    <b>GitHub</b>
+                    <a href="https://github.com/dundd2" target="_blank">@dundd2</a> <br>
+                    • More technology project on GitHub
+                </li>
+                <li>
+                    <i class="fab fa-linkedin-in"></i>
+                    <b>LinkedIn</b>
+                    <a href="https://linkedin.com/in/duncanl400" target="_blank">@duncanl400</a> <br>
+                    • More on my education and experiences
+                </li>
+                <li>
+                    <i class="fab fa-sketchfab"></i>
+                    <b>Sketchfab</b>
+                    <a href="https://sketchfab.com/dundd2" target="_blank">@dundd2</a>
+                </li>
+                <li>
+                    <i class="fas fa-robot"></i>
+                    <b>Hugging Face</b>
+                    <a href="https://huggingface.co/Dundd2" target="_blank">@Dundd2</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <div class="coming-soon-banner">
+        <p>🚀 More exciting projects and features coming soon! Stay tuned!</p>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Duncan Law</h4>
+                <p>Digital Media & Games Student</p>
+                <p>University of Sussex</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#video-editing">Video Editing</a></li>
+                    <li><a href="#ui-design">UI Design</a></li>
+                    <li><a href="#graphic-logo-design">Graphics</a></li>
+                </ul>
+                <p><a href="https://dundd2.github.io/Portfolio-Website/" target="_blank">Visit My Portfolio Website</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-social">
+                    <a href="https://github.com/dundd2" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/duncanl400" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://sketchfab.com/dundd2" target="_blank"><i class="fab fa-sketchfab"></i></a>
+                    <a href="https://huggingface.co/Dundd2" target="_blank"><i class="fas fa-robot"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Duncan Law. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top">↑</button>
+
+    <!-- Image Modal Structure -->
+    <div class="image-modal hidden">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img src="" alt="Enlarged Image">
+        </div>
+    </div>
+</body>
+</html>
