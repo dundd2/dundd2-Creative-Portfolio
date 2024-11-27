@@ -1,55 +1,15 @@
-# Creative Portfolio - Duncan Law
+# Duncan Law - Creative Portfolio
 
-A dynamic and interactive portfolio showcasing my creative works in video editing, UI/UX design, graphics, game development, and 3D modeling. This portfolio demonstrates my versatility in digital media creation and technical implementation.
+Welcome to my Creative Portfolio! This project showcases my work and skills as a Computing for Digital Media and Games student at the University of Sussex. The website features modern web technologies and interactive elements to create an engaging user experience.
 
 ## Live Demo
-Visit the Creative Portfolio at: [Creative Portfolio Link]
+Visit my portfolio at: [Creative Portfolio](https://dundd2.github.io/Creative-Portfolio/)
 
 ## Overview
-This creative portfolio highlights my work as a Computing for Digital Media and Games student at the University of Sussex, featuring various creative projects and technical implementations.
+This portfolio website serves as a digital representation of my capabilities and experiences in the field of computing. It highlights my passion for technology, game development, and multimedia production.
 
-## Key Features
+## Features
 
-### Interactive Design
+### Visual Elements & Animations
 - Dynamic theme switching with 8 preset color schemes
-- Dark/Light mode toggle with smooth transitions
-- Custom zoom control for better content viewing
-- Adjustable font size settings
-- Smooth scrolling navigation
-
-### Technical Implementation
-
-#### Frontend Technologies
-- HTML5
-- CSS3 (Advanced animations)
-- JavaScript (ES6+)
-- Intersection Observer API
-- Custom scroll animations
-
-#### Visual Effects
-- Parallax scrolling
-- Smooth fade-in animations
-- Interactive image galleries
-- Custom cursor effects
-- Dynamic background gradients
-
-#### Responsive Design
-- Mobile-first approach
-- Adaptive layouts
-- Touch-friendly interfaces
-- Responsive images and galleries
-
-### WORKING ON (v0.5 )
-the setting is not showing and not working now after i click in to button
-
-video papa?
-
-fix text in the web page 
-
-fix size of 3d model
-
-add this url to Portfolio Website and first web of dunc
-
-fix tags
-
-fix 3d logo url
+- 

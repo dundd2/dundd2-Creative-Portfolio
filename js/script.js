@@ -122,26 +122,6 @@ function createMouseFollower() {
     });
 }
 
-// Add settings panel toggle functionality
-const settingsToggle = document.getElementById('settings-toggle');
-const settingsPanel = document.getElementById('settings-panel');
-const settingsClose = document.getElementById('settings-close');
-
-settingsToggle.addEventListener('click', () => {
-    settingsPanel.classList.remove('hidden');
-});
-
-settingsClose.addEventListener('click', () => {
-    settingsPanel.classList.add('hidden');
-});
-
-// Close settings when clicking outside
-document.addEventListener('click', (e) => {
-    if (!settingsPanel.contains(e.target) && !settingsToggle.contains(e.target)) {
-        settingsPanel.classList.add('hidden');
-    }
-});
-
 // GTA V Mods Gallery
 function initModGallery() {
     const mainImage = document.querySelector('.mod-main-image img');
@@ -372,34 +352,6 @@ function initSectionEffects() {
     });
 }
 
-// 改進設定面板功能
-function initSettingsPanel() {
-    const settingsToggle = document.getElementById('settings-toggle');
-    const settingsPanel = document.getElementById('settings-panel');
-    const settingsClose = document.getElementById('settings-close');
-
-    settingsToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        settingsPanel.classList.toggle('hidden');
-    });
-
-    settingsClose.addEventListener('click', () => {
-        settingsPanel.classList.add('hidden');
-    });
-
-    // 點擊面板外部關閉
-    document.addEventListener('click', (e) => {
-        if (!settingsPanel.contains(e.target) && !settingsToggle.contains(e.target)) {
-            settingsPanel.classList.add('hidden');
-        }
-    });
-
-    // 防止面板內部點擊關閉
-    settingsPanel.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-}
-
 // Image Modal Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.querySelector('.image-modal');
@@ -443,25 +395,55 @@ function changeMainImage(src) {
     });
 }
 
-// Add this to your existing script.js file
-function initModelGallery() {
-    const thumbnails = document.querySelectorAll('.model-thumb');
-    const mainModel = document.querySelector('.main-model');
+// Function to change main overview image
+function changeMainOverviewImage(src) {
+    const mainImage = document.getElementById('mainOverviewImage');
+    if (mainImage) mainImage.src = src;
+    
+    // Update active thumbnail
+    const thumbnails = document.querySelectorAll('.model-overview .thumbnail-item img');
+    thumbnails.forEach(thumb => {
+        thumb.classList.remove('active');
+        if (thumb.src === src) thumb.classList.add('active');
+    });
+}
+
+// Function to change main model image
+function changeMainModelImage(src, modelId) {
+    const mainImage = document.getElementById(`mainModelImage${modelId}`);
+    if (mainImage) mainImage.src = src;
+    
+    // Update active thumbnail
+    const thumbnails = document.querySelectorAll(`.model-item[data-model-id="${modelId}"] .thumbnail-item img`);
+    thumbnails.forEach(thumb => {
+        thumb.classList.remove('active');
+        if (thumb.src === src) thumb.classList.add('active');
+    });
+}
+
+// Function to change video editing image
+function changeVideoImage(src) {
+    const mainImage = document.querySelector('#mainVideoImage');
+    if (mainImage) mainImage.src = src;
+    
+    // Update active thumbnail
+    const thumbnails = document.querySelectorAll('.video-gallery .thumbnail-item img');
+    thumbnails.forEach(thumb => {
+        thumb.classList.remove('active');
+        if (thumb.src === src) thumb.classList.add('active');
+    });
+}
+
+// Initialize video gallery
+function initVideoGallery() {
+    const mainImage = document.querySelector('#mainVideoImage');
+    const thumbnails = document.querySelectorAll('.video-gallery .thumbnail-item img');
     
     thumbnails.forEach(thumb => {
-        thumb.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            // Update active state
-            document.querySelector('.model-thumbnails li.active')?.classList.remove('active');
-            thumb.parentElement.classList.add('active');
-            
-            // Update main model
-            const url = thumb.dataset.url;
-            const img = thumb.querySelector('img');
-            mainModel.href = url;
-            mainModel.querySelector('.model-name').textContent = img.alt;
-            mainModel.querySelector('.main-preview').src = img.src;
+        thumb.addEventListener('click', () => {
+            mainImage.src = thumb.src;
+            thumbnails.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
         });
     });
 }
@@ -478,12 +460,26 @@ document.addEventListener('DOMContentLoaded', () => {
     enhanceThemeToggle();
     initBackToTop();
     initSectionEffects();
-    initSettingsPanel();
-    initModelGallery();
+    initVideoGallery();
     
     // 為標題添加打字機效果
     const welcomeText = document.querySelector('.about-content h2');
     if (welcomeText) {
         typeWriter(welcomeText, welcomeText.textContent);
     }
+    
+    // Initialize model overview gallery
+    const overviewThumbnails = document.querySelectorAll('.model-overview .thumbnail-item img');
+    overviewThumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => changeMainOverviewImage(thumb.src));
+    });
+    
+    // Initialize individual model galleries
+    document.querySelectorAll('.model-item').forEach((item, index) => {
+        item.setAttribute('data-model-id', index + 1);
+        const thumbnails = item.querySelectorAll('.thumbnail-item img');
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => changeMainModelImage(thumb.src, index + 1));
+        });
+    });
 });

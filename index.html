@@ -21,40 +21,6 @@
 </head>
 
 <body>
-    <div id="settings-toggle" class="settings-toggle">
-        <span>⚙️</span>
-    </div>
-    <div id="settings-panel" class="settings-panel hidden">
-        <button id="settings-close" class="settings-close">×</button>
-        <div class="settings-content">
-            <div class="settings-item">
-                <label>Theme</label>
-                <select id="theme-select">
-                    <option value="default">Default</option>
-                    <option value="ocean">Ocean</option>
-                    <option value="sunset">Sunset</option>
-                    <option value="forest">Forest</option>
-                    <option value="cyber">Cyber</option>
-                    <option value="minimal">Minimal</option>
-                    <option value="neon">Neon</option>
-                    <option value="midnight">Midnight</option>
-                </select>
-            </div>
-            <div class="settings-item">
-                <label>Dark Mode</label>
-                <button id="darkmode-toggle">🌓</button>
-            </div>
-            <div class="settings-item">
-                <label>Zoom</label>
-                <input type="range" id="zoom-control" min="80" max="120" value="100">
-            </div>
-            <div class="settings-item">
-                <label>Font Size</label>
-                <input type="range" id="font-size-control" min="14" max="20" value="16">
-            </div>
-            <span class="version-tag">v1.0</span>
-        </div>
-    </div>
     <header>
         <nav>
             <ul class="nav-list">
@@ -94,12 +60,23 @@
             <h2>Video Editing</h2>
             <p>Using Adobe Premiere</p>
             <div class="video-content">
-                <div class="video-container">
-                    <img src="images/video_editing_main.jpg" alt="Video Editing">
-                    <div class="video-thumbnails">
-                        <img src="images/video_editing_timeline.png" alt="Timeline">
-                        <img src="images/video_editing_wave.png" alt="Waveform">
-                        <img src="images/video_editing_vectorscope.png" alt="Vectorscope">
+                <div class="video-gallery">
+                    <div class="main-image">
+                        <img id="mainVideoImage" src="images/video_editing_main.jpg" alt="Video Editing Main">
+                    </div>
+                    <div class="thumbnails-row">
+                        <div class="thumbnail-item">
+                            <img src="images/video_editing_main.jpg" alt="Main Video" onclick="changeVideoImage(this.src)" class="active">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="images/video_editing_timeline.png" alt="Timeline" onclick="changeVideoImage(this.src)">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="images/video_editing_wave.png" alt="Waveform" onclick="changeVideoImage(this.src)">
+                        </div>
+                        <div class="thumbnail-item">
+                            <img src="images/video_editing_vectorscope.png" alt="Vectorscope" onclick="changeVideoImage(this.src)">
+                        </div>
                     </div>
                 </div>
 
@@ -357,46 +334,101 @@
 </section>
 
         <section id="modeling" class="modeling-section">
-    <h2>3D Modeling</h2>
-    <p>Using Maya and Blender</p>
-    <p>Click on images to view interactive 3D models on Sketchfab</p>
-
-    <div class="models-featured">
-        <div class="models-main-view">
-            <div class="model-showcase">
-                <a href="https://sketchfab.com/3d-models/donbrothers-mini-figure-don-momotaro-c016686884bf429f856b02f0f3d17e2a" class="main-model" target="_blank">
-                    <div class="model-details">
-                        <div class="model-top">
-                            <div class="model-name">DonBrothers Mini Figure - Don Momotaro</div>
-                            <div class="model-version">v1.0</div>
-                        </div>
-                        <div class="model-bottom">
-                            <span class="bottom-by">By</span> Duncan Law
-                        </div>
+            <h2>3D Modeling</h2>
+            <p>Using Maya and Blender</p>
+            <p>Click on images to view interactive 3D models on Sketchfab</p>
+            
+            <!-- Overview Gallery with same structure as GTA gallery -->
+            <div class="model-overview">
+                <div class="main-image">
+                    <img id="mainOverviewImage" src="images/3d_models_overview1.png" alt="3D Models Overview" class="img-responsive">
+                </div>
+                <div class="thumbnails-row">
+                    <div class="thumbnail-item">
+                        <img src="images/3d_models_overview1.png" alt="Overview 1" onclick="changeMainOverviewImage(this.src)" class="active">
                     </div>
-                    <img src="images/Don Momotaro.png" alt="Don Momotaro" class="main-preview">
-                </a>
+                    <div class="thumbnail-item">
+                        <img src="images/3d_models_overview2.png" alt="Overview 2" onclick="changeMainOverviewImage(this.src)">
+                    </div>
+                    <div class="thumbnail-item">
+                        <img src="images/3d_models_overview3.png" alt="Overview 3" onclick="changeMainOverviewImage(this.src)">
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <div class="models-sidebar">
-            <ul class="model-thumbnails">
-                <li class="active">
-                    <a href="#" class="model-thumb" data-url="https://sketchfab.com/3d-models/donbrothers-mini-figure-don-momotaro-c016686884bf429f856b02f0f3d17e2a">
-                        <img src="images/Don Momotaro.png" alt="Don Momotaro">
-                    </a>
-                </li>
-                <!-- Repeat for other models -->
-                <li>
-                    <a href="#" class="model-thumb" data-url="https://sketchfab.com/3d-models/pfp-beaab9a9cc04488bae7a7111306dc678">
-                        <img src="images/pfp.png" alt="PFP">
-                    </a>
-                </li>
-                <!-- ...similar entries for remaining models... -->
-            </ul>
-        </div>
-    </div>
-</section>
+
+            <div class="modeling-content">
+                <div class="model-grid">
+                    <!-- For each model item, update to use the same gallery structure -->
+                    <div class="model-item">
+                        <div class="model-gallery">
+                            <div class="main-image">
+                                <a href="https://sketchfab.com/3d-models/donbrothers-mini-figure-don-momotaro-c016686884bf429f856b02f0f3d17e2a" target="_blank">
+                                    <img id="mainModelImage1" src="images/Don Momotaro.png" alt="Don Momotaro">
+                                </a>
+                            </div>
+                            <div class="thumbnails-row">
+                                <!-- Add thumbnails if you have multiple views of the same model -->
+                            </div>
+                        </div>
+                        <h3>DonBrothers Mini Figure - Don Momotaro</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/pfp-beaab9a9cc04488bae7a7111306dc678" target="_blank">
+                            <img src="images/pfp.png" alt="PFP">
+                        </a>
+                        <h3>PFP</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-aoyagi-mitsuki-01844db625b24996a4bfe8fad13a4e1f" target="_blank">
+                            <img src="images/Aoyagi Mitsuki.png" alt="Aoyagi Mitsuki">
+                        </a>
+                        <h3>Sentai Akibaranger Mini Figure - Aoyagi Mitsuki</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-akibared-ceb434276eaa429cbb1851c52b3d105e" target="_blank">
+                            <img src="images/AkibaRed.png" alt="AkibaRed">
+                        </a>
+                        <h3>Sentai Akibaranger Mini Figure - AkibaRed</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-hakase-hiroyo-b3354b61637542b1ad29248fa15027ea" target="_blank">
+                            <img src="images/Hakase Hiroyo.png" alt="Hakase Hiroyo">
+                        </a>
+                        <h3>Sentai Akibaranger Mini Figure - Hakase Hiroyo</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-shachiku-6f43c971ef2241a4b7bd7d8a3be84a0a" target="_blank">
+                            <img src="images/Shachiku.png" alt="Shachiku">
+                        </a>
+                        <h3>Sentai Akibaranger Mini Figure - Shachiku</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-aoi-ichikawa-4ac8a45b45c24ee7a9d346f9f15e6429" target="_blank">
+                            <img src="images/Aoi Ichikawa.png" alt="Aoi Ichikawa">
+                        </a>
+                        <h3>Sentai Akibaranger Mini Figure - Aoi Ichikawa</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-nobuo-akagi-5ebaba00956a4420a41fc74fc28ca9cf" target="_blank">
+                            <img src="images/Nobuo Akagi.png" alt="Nobuo Akagi">
+                        </a>
+                        <h3>Sentai Akibaranger Mini Figure - Nobuo Akagi</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-akibared-ranger-keys-3f573d620506463ca89f5a32f7c539f9" target="_blank">
+                            <img src="images/AkibaRed Ranger Keys.png" alt="AkibaRed Ranger Keys">
+                        </a>
+                        <h3>Sentai Akibaranger AkibaRed Ranger Keys</h3>
+                    </div>
+                    <div class="model-item">
+                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-akibayellow-ranger-keys-4cf7f18d162a4a128931599a2c15a37b" target="_blank">
+                            <img src="images/AkibaYellow Ranger Keys.png" alt="AkibaYellow Ranger Keys">
+                        </a>
+                        <h3>Sentai Akibaranger AkibaYellow Ranger Keys</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="contact" class="contact-section">
             <h2>Get in touch!</h2>
