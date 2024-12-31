@@ -1,6 +1,6 @@
 # Duncan Law - Creative Portfolio
 
-Welcome to my Creative Portfolio! This project showcases my Creative as a Computing for Digital Media and Games student at the University of Sussex. The website features modern web technologies and interactive elements to create an engaging user experience.
+Welcome to my Creative Portfolio! This project showcases my creativity as a Computing for Digital Media and Games student at the University of Sussex. The website features modern web technologies and interactive elements to create an engaging user experience.
 
 ## 🌐 Live Demo
 Visit my portfolio at: [Creative Portfolio](https://dundd2.github.io/Creative-Portfolio/)
@@ -13,7 +13,7 @@ A dynamic digital showcase of my Creative in computing, game development, and mu
 ### Visual Elements & Animations
 - Interactive image galleries with zoom effects
 - Smooth scroll animations and fade-in effects
-- Dynamic theme color customization
+- Dynamic theme colour customization
 - Mouse-following visual effects
 - Responsive layout transformations
 
