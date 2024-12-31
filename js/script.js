@@ -448,6 +448,29 @@ function initVideoGallery() {
     });
 }
 
+// Function to change UI design image
+function changeUIImage(src) {
+    document.getElementById('mainUIImage').src = src;
+    document.querySelectorAll('.thumbnails-row img').forEach(img => {
+        img.classList.remove('active');
+    });
+    event.target.classList.add('active');
+}
+
+// Initialize UI gallery
+function initUIGallery() {
+    const mainImage = document.querySelector('#mainUIImage');
+    const thumbnails = document.querySelectorAll('.ui-design-section .thumbnail-item img');
+    
+    thumbnails.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            mainImage.src = thumb.src;
+            thumbnails.forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
+}
+
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
     handleScrollAnimation();
@@ -461,6 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
     initSectionEffects();
     initVideoGallery();
+    initUIGallery();
     
     // 為標題添加打字機效果
     const welcomeText = document.querySelector('.about-content h2');

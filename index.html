@@ -26,8 +26,9 @@
             <ul class="nav-list">
                 <li><a href="#about">About</a></li>
                 <li><a href="#video-editing">Video Production</a></li>
-                <li><a href="#ui-design">UI/UX & Graphic Design</a></li>
-                <li><a href="#scene-design">Game Development</a></li>
+                <li><a href="#ui-design">UI/UX & Graphics</a></li>
+                <li><a href="#scene-design">Unity Development</a></li>
+                <li><a href="#scene-design-vm">GTA Mods</a></li>
                 <li><a href="#modeling">3D Models</a></li>
                 <li class="portfolio-link"><a href="https://dundd2.github.io/Portfolio-Website/" target="_blank">Portfolio Website</a></li>
             </ul>
@@ -46,7 +47,7 @@
                 <div class="social-icons">
                     <a href="https://github.com/dundd2" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/duncanl400" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://sketchfab.com/dundd2" target="_blank"><i class="fab fa-sketchfab"></i></a>
+                    <a href="https://sketchfab.com/dundd2" target="_blank">🎲</a>
                     <a href="https://huggingface.co/Dundd2" target="_blank"><i class="fas fa-robot"></i></a>
                 </div>
             </div>
@@ -99,41 +100,87 @@
                 </div>
             </div>
             <div class="filming-content">
-                <h3>Filming Projects</h3>
+                <h3>Group Video Project: PAPA - Personal Assistant Personality App</h3>
+                <p>Created a video production with my group mates for an innovative fictional mobile app project that personalizes AI assistants. The project involved comprehensive planning and execution across multiple filming sessions.</p>
                 <div class="filming-grid">
                     <div class="filming-item">
                         <img src="images/filming_1.jpg" alt="Studio Filming">
-                        <p>Professional Studio Filming</p>
+                        <div class="filming-description">
+                            <h4>Professional Studio Sessions</h4>
+                            <ul>
+                                <li>Multiple camera operator roles</li>
+                                <li>Talking head interviews setup</li>
+                                <li>Voice recording for AI assistant</li>
+                                <li>App functionality demonstrations</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="filming-item">
                         <img src="images/filming_2.jpg" alt="Location Shooting">
-                        <p>Outdoor Location Shooting</p>
+                        <div class="filming-description">
+                            <h4>Outdoor Location Filming</h4>
+                            <ul>
+                                <li>Forest scenes at University grounds</li>
+                                <li>Multiple angle coverage</li>
+                                <li>Dynamic running sequences</li>
+                                <li>Natural lighting management</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="filming-item">
                         <img src="images/filming_3.jpg" alt="Kitchen Setup">
-                        <p>Kitchen Scene Setup</p>
+                        <div class="filming-description">
+                            <h4>Kitchen Scene Production</h4>
+                            <ul>
+                                <li>Cooking demonstration scenes</li>
+                                <li>Interactive app features showcase</li>
+                                <li>Multiple camera setups</li>
+                                <li>Sound recording in complex environment</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="ui-design" class="ui-design-section">
-            <h2>UI Design</h2>
-            <p>Using Adobe XD</p>
-             <div class="ui-design-content">
-                <div class="ui-images">
-                    <img src="images/ui_design_1.png" alt="UI Design 1">
-                    <img src="images/ui_design_2.png" alt="UI Design 2">
-                    <img src="images/ui_design_3.png" alt="UI Design 3">
-                    <img src="images/ui_design_4.png" alt="UI Design 4">
-                    <img src="images/ui_design_5.png" alt="UI Design 5">
-                     <img src="images/ui_design_6.png" alt="UI Design 6">
-                    <img src="images/ui_design_7.png" alt="UI Design 7">
-                    <img src="images/ui_design_8.png" alt="UI Design 8">
-                     <img src="images/ui_design_9.png" alt="UI Design 9">
+    <h2>C# UI Design</h2>
+    <p>Using Windows Presentation Foundation (WPF)</p>
+    <div class="video-content">
+        <div class="video-gallery">
+            <div class="main-image">
+                <img id="mainUIImage" src="images/ui_design_1.png" alt="UI Design Main">
+            </div>
+            <div class="thumbnails-row">
+                <div class="thumbnail-item">
+                    <img src="images/ui_design_1.png" alt="Main UI" onclick="changeUIImage(this.src)" class="active">
                 </div>
-             </div>
-        </section>
+                <div class="thumbnail-item">
+                    <img src="images/ui_design_2.png" alt="Content Management" onclick="changeUIImage(this.src)">
+                </div>
+                <div class="thumbnail-item">
+                    <img src="images/ui_design_3.png" alt="Service Management" onclick="changeUIImage(this.src)">
+                </div>
+            </div>
+        </div>
+
+        <div class="video-description">
+            <ul>
+                <li>A visually appealing interface featuring modern design principles and user-centric interactions.</li>
+                <li>Dark mode interface with elegant #1A1B2E background</li>
+                <li>Custom-styled buttons with smooth rounded corners</li>
+                <li>Animated hover effects with color transitions</li>
+                <li>Real-time input validation with tooltips</li>
+                <li>Consistent visual hierarchy and spacing</li>
+            </ul>
+            <div class="video-link">
+                <a href="https://github.com/dundd2/RSM-UK-Coding-Challenge-2024-Streaming-Service-Management" target="_blank" class="view-project">
+                    View Project on GitHub <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="graphic-logo-design" class="graphic-logo-section">
     <h2>Graphic/ Logo Design</h2>
@@ -273,42 +320,49 @@
 </section>
 
         <section id="scene-design-vm" class="scene-design-vm-section">
-            <h2>GTA V Mods</h2>
-            <p>Using OpenIV</p>
-            <p>Toyota Prius Hikonin Sentai Akibaranger Machine Itashar Livery 2.0</p>
-            <p><a href="https://www.gta5-mods.com/paintjobs/toyota-prius-xw30-hikonin-sentai-akibaranger-machine-itashar-z-cune-aoi-livery#description_tab" target="_blank" class="view-project">View on GTA5-Mods.com <i class="fas fa-external-link-alt"></i></a></p>
+    <h2>GTA V Mods</h2>
+    <p>Using OpenIV and Adobe Photoshop</p>
+    <div class="mod-description">
+        <h3>Toyota Prius (XW30) Hikonin Sentai Akibaranger Machine Itashar Z-Cune Aoi Livery</h3>
+        <ul>
+            <li>Created to celebrate Hikonin Sentai Akibaranger's 10th Anniversary</li>
+            <li>Based on original mod by r1-5-qwertyuiop (vehicles/toyota-prius)</li>
+            <li>Custom skin design and editing using Adobe Photoshop</li>
+            <li>Detailed texture work to match the original Itashar design</li>
+            <li>High-resolution livery with authentic Akibaranger elements</li>
+        </ul>
+    </div>
+    <div class="scene-design-vm-content">
+        <div class="gta-gallery">
+            <!-- Main Image -->
+            <div class="main-image">
+                <img id="mainGTAImage" src="images/GTAprius (4).webp" alt="GTA Mod Main Preview" style="width: 100%; max-width: 800px; height: auto;">
+            </div>
 
-            <div class="scene-design-vm-content">
-                <div class="gta-gallery">
-                    <!-- Main Image -->
-                    <div class="main-image">
-                        <img id="mainGTAImage" src="images/GTAprius (4).webp" alt="GTA Mod Main Preview" class="img-responsive">
-                    </div>
-
-                    <!-- Thumbnails -->
-                    <div class="thumbnails-row">
-                        <div class="thumbnail-item">
-                            <img src="images/GTAprius (1).webp" alt="GTA Mod Preview 1" onclick="changeMainImage(this.src)">
-                        </div>
-                        <div class="thumbnail-item">
-                            <img src="images/GTAprius (2).png" alt="GTA Mod Preview 2" onclick="changeMainImage(this.src)">
-                        </div>
-                        <div class="thumbnail-item">
-                            <img src="images/GTAprius (3).png" alt="GTA Mod Preview 3" onclick="changeMainImage(this.src)">
-                        </div>
-                        <div class="thumbnail-item">
-                            <img src="images/GTAprius (4).webp" alt="GTA Mod Preview 4" onclick="changeMainImage(this.src)">
-                        </div>
-                        <div class="thumbnail-item">
-                            <img src="images/GTAprius (5).png" alt="GTA Mod Preview 5" onclick="changeMainImage(this.src)">
-                        </div>
-                        <div class="thumbnail-item">
-                            <img src="images/GTAprius (6).png" alt="GTA Mod Preview 6" onclick="changeMainImage(this.src)">
-                        </div>
-                    </div>
+            <!-- Thumbnails -->
+            <div class="thumbnails-row">
+                <div class="thumbnail-item">
+                    <img src="images/GTAprius (1).webp" alt="GTA Mod Preview 1" onclick="changeMainImage(this.src)" style="width: 150px; height: 100px; object-fit: cover;">
+                </div>
+                <div class="thumbnail-item">
+                    <img src="images/GTAprius (2).png" alt="GTA Mod Preview 2" onclick="changeMainImage(this.src)" style="width: 150px; height: 100px; object-fit: cover;">
+                </div>
+                <div class="thumbnail-item">
+                    <img src="images/GTAprius (3).png" alt="GTA Mod Preview 3" onclick="changeMainImage(this.src)" style="width: 150px; height: 100px; object-fit: cover;">
+                </div>
+                <div class="thumbnail-item">
+                    <img src="images/GTAprius (4).webp" alt="GTA Mod Preview 4" onclick="changeMainImage(this.src)" style="width: 150px; height: 100px; object-fit: cover;">
+                </div>
+                <div class="thumbnail-item">
+                    <img src="images/GTAprius (5).png" alt="GTA Mod Preview 5" onclick="changeMainImage(this.src)" style="width: 150px; height: 100px; object-fit: cover;">
+                </div>
+                <div class="thumbnail-item">
+                    <img src="images/GTAprius (6).png" alt="GTA Mod Preview 6" onclick="changeMainImage(this.src)" style="width: 150px; height: 100px; object-fit: cover;">
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <section id="ml-award" class="ml-award-section">
     <h2>Machine Learning Creative Solution Award 2023-2024</h2>
@@ -334,101 +388,106 @@
 </section>
 
         <section id="modeling" class="modeling-section">
-            <h2>3D Modeling</h2>
-            <p>Using Maya and Blender</p>
-            <p>Click on images to view interactive 3D models on Sketchfab</p>
-            
-            <!-- Overview Gallery with same structure as GTA gallery -->
-            <div class="model-overview">
-                <div class="main-image">
-                    <img id="mainOverviewImage" src="images/3d_models_overview1.png" alt="3D Models Overview" class="img-responsive">
-                </div>
-                <div class="thumbnails-row">
-                    <div class="thumbnail-item">
-                        <img src="images/3d_models_overview1.png" alt="Overview 1" onclick="changeMainOverviewImage(this.src)" class="active">
-                    </div>
-                    <div class="thumbnail-item">
-                        <img src="images/3d_models_overview2.png" alt="Overview 2" onclick="changeMainOverviewImage(this.src)">
-                    </div>
-                    <div class="thumbnail-item">
-                        <img src="images/3d_models_overview3.png" alt="Overview 3" onclick="changeMainOverviewImage(this.src)">
-                    </div>
-                </div>
+    <h2>3D Modeling</h2>
+    <p>Using CSM AI and ControlNet</p>
+    <div class="model-description">
+        <ul>
+            <li>Created detailed 3D models using advanced AI image-to-3D techniques</li>
+            <li>Specialized in character figures and collectibles</li>
+            <li>Focus on accurate proportions and faithful recreations</li>
+            <li>High-quality texture work for authentic appearances</li>
+            <li>Collection includes various Sentai characters and original designs</li>
+        </ul>
+    </div>
+    <div class="model-overview">
+        <!-- Overview Gallery -->
+        <div class="main-image">
+            <img id="mainOverviewImage" src="images/3d_models_overview1.png" alt="3D Models Overview" class="img-responsive">
+        </div>
+        <div class="thumbnails-row">
+            <div class="thumbnail-item">
+                <img src="images/3d_models_overview1.png" alt="Overview 1" onclick="changeMainOverviewImage(this.src)" class="active">
             </div>
+            <div class="thumbnail-item">
+                <img src="images/3d_models_overview2.png" alt="Overview 2" onclick="changeMainOverviewImage(this.src)">
+            </div>
+            <div class="thumbnail-item">
+                <img src="images/3d_models_overview3.png" alt="Overview 3" onclick="changeMainOverviewImage(this.src)">
+            </div>
+        </div>
+    </div>
 
-            <div class="modeling-content">
-                <div class="model-grid">
-                    <!-- For each model item, update to use the same gallery structure -->
-                    <div class="model-item">
-                        <div class="model-gallery">
-                            <div class="main-image">
-                                <a href="https://sketchfab.com/3d-models/donbrothers-mini-figure-don-momotaro-c016686884bf429f856b02f0f3d17e2a" target="_blank">
-                                    <img id="mainModelImage1" src="images/Don Momotaro.png" alt="Don Momotaro">
-                                </a>
-                            </div>
-                            <div class="thumbnails-row">
-                                <!-- Add thumbnails if you have multiple views of the same model -->
-                            </div>
-                        </div>
-                        <h3>DonBrothers Mini Figure - Don Momotaro</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/pfp-beaab9a9cc04488bae7a7111306dc678" target="_blank">
-                            <img src="images/pfp.png" alt="PFP">
-                        </a>
-                        <h3>PFP</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-aoyagi-mitsuki-01844db625b24996a4bfe8fad13a4e1f" target="_blank">
-                            <img src="images/Aoyagi Mitsuki.png" alt="Aoyagi Mitsuki">
-                        </a>
-                        <h3>Sentai Akibaranger Mini Figure - Aoyagi Mitsuki</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-akibared-ceb434276eaa429cbb1851c52b3d105e" target="_blank">
-                            <img src="images/AkibaRed.png" alt="AkibaRed">
-                        </a>
-                        <h3>Sentai Akibaranger Mini Figure - AkibaRed</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-hakase-hiroyo-b3354b61637542b1ad29248fa15027ea" target="_blank">
-                            <img src="images/Hakase Hiroyo.png" alt="Hakase Hiroyo">
-                        </a>
-                        <h3>Sentai Akibaranger Mini Figure - Hakase Hiroyo</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-shachiku-6f43c971ef2241a4b7bd7d8a3be84a0a" target="_blank">
-                            <img src="images/Shachiku.png" alt="Shachiku">
-                        </a>
-                        <h3>Sentai Akibaranger Mini Figure - Shachiku</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-aoi-ichikawa-4ac8a45b45c24ee7a9d346f9f15e6429" target="_blank">
-                            <img src="images/Aoi Ichikawa.png" alt="Aoi Ichikawa">
-                        </a>
-                        <h3>Sentai Akibaranger Mini Figure - Aoi Ichikawa</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-nobuo-akagi-5ebaba00956a4420a41fc74fc28ca9cf" target="_blank">
-                            <img src="images/Nobuo Akagi.png" alt="Nobuo Akagi">
-                        </a>
-                        <h3>Sentai Akibaranger Mini Figure - Nobuo Akagi</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-akibared-ranger-keys-3f573d620506463ca89f5a32f7c539f9" target="_blank">
-                            <img src="images/AkibaRed Ranger Keys.png" alt="AkibaRed Ranger Keys">
-                        </a>
-                        <h3>Sentai Akibaranger AkibaRed Ranger Keys</h3>
-                    </div>
-                    <div class="model-item">
-                        <a href="https://sketchfab.com/3d-models/sentai-akibaranger-akibayellow-ranger-keys-4cf7f18d162a4a128931599a2c15a37b" target="_blank">
-                            <img src="images/AkibaYellow Ranger Keys.png" alt="AkibaYellow Ranger Keys">
-                        </a>
-                        <h3>Sentai Akibaranger AkibaYellow Ranger Keys</h3>
-                    </div>
-                </div>
+    <div class="modeling-content">
+        <div class="model-grid">
+            <!-- Individual models -->
+            <div class="model-item">
+                <h3>DonBrothers Mini Figure - Don Momotaro</h3>
+                <a href="https://sketchfab.com/3d-models/donbrothers-mini-figure-don-momotaro-c016686884bf429f856b02f0f3d17e2a" target="_blank"></a>
+                    <img src="images/Don Momotaro.png" alt="Don Momotaro">
+                </a>
             </div>
-        </section>
+            <div class="model-item">
+                <h3>PFP</h3>
+                <a href="https://sketchfab.com/3d-models/pfp-beaab9a9cc04488bae7a7111306dc678" target="_blank">
+                    <img src="images/pfp.png" alt="PFP">
+                </a>
+            </div>
+            <div class="model-item">
+                <h3>Sentai Akibaranger Mini Figure - Aoyagi Mitsuki</h3>
+                <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-aoyagi-mitsuki-01844db625b24996a4bfe8fad13a4e1f" target="_blank">
+                    <img src="images/Aoyagi Mitsuki.png" alt="Aoyagi Mitsuki">
+                </a>
+            </div>
+            <div class="model-item">
+                <h3>Sentai Akibaranger Mini Figure - AkibaRed</h3>
+                <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-akibared-ceb434276eaa429cbb1851c52b3d105e" target="_blank">
+                    <img src="images/AkibaRed.png" alt="AkibaRed">
+                </a>
+            </div>
+            <div class="model-item">
+                <h3>Sentai Akibaranger Mini Figure - Hakase Hiroyo</h3>
+                <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-hakase-hiroyo-b3354b61637542b1ad29248fa15027ea" target="_blank">
+                    <img src="images/Hakase Hiroyo.png" alt="Hakase Hiroyo">
+                </a>
+            </div>
+            <div class="model-item">
+                <h3>Sentai Akibaranger Mini Figure - Shachiku</h3>
+                <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-shachiku-6f43c971ef2241a4b7bd7d8a3be84a0a" target="_blank">
+                    <img src="images/Shachiku.png" alt="Shachiku">
+                </a>
+            </div>
+            <div class="model-item">
+                <h3>Sentai Akibaranger Mini Figure - Aoi Ichikawa</h3>
+                <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-aoi-ichikawa-4ac8a45b45c24ee7a9d346f9f15e6429" target="_blank">
+                    <img src="images/Aoi Ichikawa.png" alt="Aoi Ichikawa">
+                </a>
+            </div>
+            <div class="model-item">
+                <h3>Sentai Akibaranger Mini Figure - Nobuo Akagi</h3>
+                <a href="https://sketchfab.com/3d-models/sentai-akibaranger-mini-figure-nobuo-akagi-5ebaba00956a4420a41fc74fc28ca9cf" target="_blank">
+                    <img src="images/Nobuo Akagi.png" alt="Nobuo Akagi">
+                </a>
+            </div>
+            <div class="model-item">
+                <h3>Sentai Akibaranger AkibaRed Ranger Keys</h3>
+                <a href="https://sketchfab.com/3d-models/sentai-akibaranger-akibared-ranger-keys-3f573d620506463ca89f5a32f7c539f9" target="_blank">
+                    <img src="images/AkibaRed Ranger Keys.png" alt="AkibaRed Ranger Keys">
+                </a>
+            </div>
+            <div class="model-item">
+                <h3>Sentai Akibaranger AkibaYellow Ranger Keys</h3>
+                <a href="https://sketchfab.com/3d-models/sentai-akibaranger-akibayellow-ranger-keys-4cf7f18d162a4a128931599a2c15a37b" target="_blank">
+                    <img src="images/AkibaYellow Ranger Keys.png" alt="AkibaYellow Ranger Keys">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="project-link">
+        <a href="https://sketchfab.com/dundd2" target="_blank" class="view-project">
+            View Models on Sketchfab <span>🧊</span>
+        </a>
+    </div>
+</section>
 
         <section id="contact" class="contact-section">
             <h2>Get in touch!</h2>
@@ -446,7 +505,7 @@
                     • More on my education and experiences
                 </li>
                 <li>
-                    <i class="fab fa-sketchfab"></i>
+                    <span>🧊</span>
                     <b>Sketchfab</b>
                     <a href="https://sketchfab.com/dundd2" target="_blank">@dundd2</a>
                 </li>
@@ -483,7 +542,7 @@
                 <div class="footer-social">
                     <a href="https://github.com/dundd2" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://linkedin.com/in/duncanl400" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://sketchfab.com/dundd2" target="_blank"><i class="fab fa-sketchfab"></i></a>
+                    <a href="https://sketchfab.com/dundd2" target="_blank">🎲</a>
                     <a href="https://huggingface.co/Dundd2" target="_blank"><i class="fas fa-robot"></i></a>
                 </div>
             </div>

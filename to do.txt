@@ -1,19 +1,7 @@
-the setting is not show and working now after i click in to it 
+
 
 ,also the nav bar problem is still there ,rewrite the nav part to see if it will helps
 
-video papa?
-
-fix text in the web page 
-
-fix size of 3d model
-
-add 2022 uk patch
-
 add this url to Portfolio Website and first web of dunc
 
-fix tags
-
-fix 3d logo url
-
-add more effect
+off line?
