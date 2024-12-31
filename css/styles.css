@@ -48,6 +48,29 @@ h1 {
 
 h2 {
     font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        var(--theme-color), 
+        transparent
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+h2:hover::after {
+    transform: scaleX(1);
 }
 
 h3 {
@@ -89,10 +112,22 @@ header {
     color: #333;
     transition: color 0.3s ease;
     white-space: nowrap;
+    position: relative;
+    background: linear-gradient(90deg, 
+        var(--theme-color) 50%, 
+        transparent 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.3s ease;
+    color: #333;
 }
 
 .nav-list li a:hover {
     color: #007bff;
+    background-position: 0 0;
+    color: white;
+    transform: translateY(-2px);
 }
 
 .portfolio-link a {
@@ -176,6 +211,18 @@ section {
     perspective: 1000px;
     position: relative;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        0 0 100px rgba(var(--theme-color-rgb), 0.1);
 }
 
 section::before {
@@ -523,6 +570,17 @@ social-icons a:hover {
     backdrop-filter: blur(5px);
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.2);
+}
+
+.hongkong-food-text h3 {
+    color: var(--accent-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.hongkong-food-text p,
+.hongkong-food-text ul {
+    color: var(--text-secondary);
 }
 
 .hongkong-food-text h3 {
@@ -1455,7 +1513,7 @@ nav ul li a:hover::after {
     }
 }
 
-/* ...existing code... */
+
 
 /* Logo Design Modifications */
 .logo-item.text-first {
@@ -1479,7 +1537,7 @@ nav ul li a:hover::after {
     } /* Added missing closing brace */
 } /* Ensure media query is properly closed */
 
-/* ...existing code... */
+
 
 /* 改進導航欄樣式 */
 .nav-list {
@@ -1559,7 +1617,7 @@ nav ul li a:hover::after {
     }
 }
 
-/* ...existing code... */
+
 
 .creative-title {
     font-family: 'Georgia', serif;
@@ -1585,7 +1643,7 @@ nav ul li a:hover::after {
     }
 }
 
-/* ...existing code... */
+
 
 /* 新的頁腳漸層主題 */
 .footer-gradient-1,
@@ -2126,3 +2184,178 @@ section h2::after {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* 新增現代化卡片懸浮效果 */
+section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 
+        0 10px 20px rgba(0,0,0,0.1),
+        0 6px 6px rgba(0,0,0,0.1),
+        0 0 100px rgba(var(--theme-color-rgb), 0.1);
+}
+
+/* 改進圖片展示效果 */
+.main-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.main-image:hover::after {
+    left: 100%;
+}
+
+/* 添加創意型動畫 */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+.about-image {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* 改進標題樣式 */
+h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        var(--theme-color), 
+        transparent
+    );
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+h2:hover::after {
+    transform: scaleX(1);
+}
+
+/* 改進導航欄設計 */
+.nav-list li a {
+    position: relative;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(90deg, 
+        var(--theme-color) 50%, 
+        transparent 50%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.nav-list li a:hover {
+    background-position: 0 0;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 添加3D視差效果 */
+.parallax-section {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.parallax-item {
+    transform: translateZ(50px);
+    transition: transform 0.3s ease;
+}
+
+
+
+.video-content {
+    display: grid;
+    grid-template-columns: minmax(300px, 600px) 1fr auto;
+    gap: 2rem;
+    align-items: start;
+}
+
+.video-gallery {
+    width: 100%;
+}
+
+.video-description {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.video-link {
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+    .video-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .video-link {
+        text-align: center;
+    }
+}
+
+.modeling-section .video-content {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 2rem;
+}
+
+.modeling-section .video-gallery {
+    max-width: 600px;
+}
+
+.modeling-section .video-description {
+    background: rgba(255,255,255,0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.modeling-section .video-description ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.modeling-section .video-description li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+

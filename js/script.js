@@ -161,12 +161,12 @@ function initModGallery() {
 // 添加滑鼠視差效果
 function initParallaxEffect() {
     document.addEventListener('mousemove', (e) => {
-        const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-        const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+        const moveX = (e.clientX - window.innerWidth / 2) * 0.05;
+        const moveY = (e.clientY - window.innerHeight / 2) * 0.05;
 
         document.querySelectorAll('.parallax-item').forEach(item => {
             const speed = item.dataset.speed || 1;
-            item.style.transform = `translate(${moveX * speed}px, ${moveY * speed}px)`;
+            item.style.transform = `translate3d(${moveX * speed}px, ${moveY * speed}px, 50px)`;
         });
     });
 }
@@ -471,6 +471,25 @@ function initUIGallery() {
     });
 }
 
+// 添加滾動漸現效果
+function initScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(50px)';
+        section.style.transition = 'all 0.6s ease-out';
+        observer.observe(section);
+    });
+}
+
 // 初始化
 document.addEventListener('DOMContentLoaded', () => {
     handleScrollAnimation();
@@ -485,6 +504,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSectionEffects();
     initVideoGallery();
     initUIGallery();
+    initScrollAnimations();
     
     // 為標題添加打字機效果
     const welcomeText = document.querySelector('.about-content h2');
